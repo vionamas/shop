@@ -25,7 +25,7 @@ module.exports = class HomeProducts {
 
     }
     update(id){
-        return db.execute(`UPDATE home SET home.name = '${this.name}', home.type = '${this.type}', home.description = '${this.description}', home.price = '${this.price}, home.image = '${this.image}' WHERE home.id = ${id}`)
+        return db.execute(`UPDATE home SET home.name = '${this.name}', home.type = '${this.type}', home.description = '${this.description}', home.price = '${this.price}', home.image = '${this.image}' WHERE home.id = ${id}`)
     }
 
     static delete(id){
