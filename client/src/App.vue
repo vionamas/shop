@@ -1,4 +1,8 @@
 <template>
+  <div class="flex justify-center items-center">
+  <Logo />
+</div>
+
   <div class="product-container">
     <div class="form-container">
       <!-- <h1 class="text-3xl font-bold underline text-blue-800">Products</h1> -->
@@ -16,6 +20,7 @@
         <button class="mt-2" @click.prevent="postProduct">Add Product</button>
       </form>
     </div>
+    
     <ul class="product-grid">
       <li v-for="product in products" :key="product.id" class="product-item">
         <div class="product-details" @click.prevent="getProduct(product.id)">
@@ -35,8 +40,13 @@
 </template>
 
 <script>
+import Logo from "./Logo.vue";
+
 export default {
   name: "App",
+  components: {
+    Logo, // Aquí importas el componente correctamente
+  },
   data() {
     return {
       products: [],
